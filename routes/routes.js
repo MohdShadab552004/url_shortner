@@ -1,5 +1,5 @@
 import express from "express";
-import Url from "../schema/Url.js";
+import Url from "../schema/url.js";
 import { nanoid } from "nanoid";
 import validUrl from "validator";
 import dotenv from "dotenv";
