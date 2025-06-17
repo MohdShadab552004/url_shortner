@@ -29,7 +29,6 @@ router.post("/shorten", async (req, res) => {
 
         const shortId = nanoid(8);
         const shortUrl = `${baseUrl}/${shortId}`;
-        console.log("Short URL:", shortUrl);
         
         // Create and save new entry
         url = new Url({
@@ -38,7 +37,6 @@ router.post("/shorten", async (req, res) => {
         });
 
         await url.save();
-        console.log("URL saved:", url);
         res.status(201).json({
             originalUrl: url.originalUrl,
             shortUrl: url.shortUrl,
